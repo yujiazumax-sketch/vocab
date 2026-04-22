@@ -21,7 +21,7 @@ const configString = typeof __firebase_config !== 'undefined' ? __firebase_confi
 const configToUse = configString ? JSON.parse(configString) : VERCEL_FIREBASE_CONFIG;
 
 // ★ここを変えることで、前のアプリと単語帳データを分けることができます
-const rawAppId = typeof __app_id !== 'undefined' ? __app_id : 'sub-cyber-vocab';
+const rawAppId = typeof __app_id !== 'undefined' ? __app_id : 'cyber-vocab-vercel';
 const appId = String(rawAppId).replace(/\//g, '-');
 
 let app, auth, db;
